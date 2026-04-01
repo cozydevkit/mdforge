@@ -54,7 +54,7 @@ body::before {
 ::selection { background: var(--accent); color: var(--bg-0); }
 
 /* ─── Layout ─── */
-.df-page { display: flex; min-height: 100vh; }
+.df-page { min-height: 100vh; }
 .df-sidebar {
   width: 280px; position: fixed; top: 0; left: 0; bottom: 0;
   background: var(--bg-1); border-right: 1px solid var(--border);
@@ -62,9 +62,9 @@ body::before {
   scrollbar-width: thin; scrollbar-color: var(--bg-3) transparent;
 }
 .df-main {
-  flex: 1; margin-left: 280px; padding: 3rem 4rem 6rem;
-  max-width: calc(100% - 280px); width: 100%;
+  margin-left: 280px; padding: 3rem 4rem 6rem;
   overflow-wrap: break-word; word-break: break-word;
+  overflow-x: hidden;
 }
 .df-main > * { max-width: 780px; }
 

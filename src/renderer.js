@@ -60,8 +60,10 @@ function renderTocHTML(toc) {
 }
 
 function wrapSections(html) {
-  return html.replace(/<(h[1-6])/g, '</div><div class="df-reveal"><$1')
-    .replace(/^<\/div>/, '') + '</div>';
+  // Wrap content before each heading in a reveal div
+  // Split on headings, wrap each chunk
+  const parts = html.split(/(?=<h[1-6][\s>])/);
+  return parts.map(part => `<div class="df-reveal">${part}</div>`).join('\n');
 }
 
 // ─── Inline JS ───
