@@ -5,3 +5,4 @@ demo.html
 !src/**/*.html
 .DS_Store
 roadmaps/
+docs/
