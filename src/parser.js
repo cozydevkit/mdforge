@@ -58,13 +58,7 @@ function slugify(str) {
     .trim();
 }
 
-// ─── Syntax Highlight (inline, no external dep) ───
-function highlightCode(str, lang) {
-  const escaped = escapeHtml(str);
-  const langLabel = lang ? `<span class="code-lang">${lang}</span>` : '';
-  return `<div class="code-block">${langLabel}<pre><code class="language-${lang || 'text'}">${escaped}</code></pre></div>`;
-}
-
+// ─── Escape HTML ───
 function escapeHtml(str) {
   return str
     .replace(/&/g, '&amp;')
@@ -81,8 +75,16 @@ export function parse(markdownSource) {
     html: true,
     linkify: true,
     typographer: true,
-    highlight: highlightCode,
   });
+
+  // Custom fence renderer — wraps code blocks in .code-block div
+  md.renderer.rules.fence = (tokens, idx) => {
+    const token = tokens[idx];
+    const lang = token.info.trim();
+    const escaped = escapeHtml(token.content);
+    const langLabel = lang ? `<span class="code-lang">${lang}</span>` : '';
+    return `<div class="code-block">${langLabel}<pre><code class="language-${lang || 'text'}">${escaped}</code></pre></div>\n`;
+  };
 
   // Parse to tokens first (for TOC)
   const tokens = md.parse(body, {});
