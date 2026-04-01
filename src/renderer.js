@@ -157,7 +157,7 @@ export function render({ html, toc, meta }) {
   const sidebarBlock = showToc ? `
     <aside class="df-sidebar" id="dfSidebar">
       <div class="df-brand">
-        <div class="df-brand-mark">df</div>
+        <div class="df-brand-mark">md</div>
         <div class="df-brand-text">${esc(title)}</div>
       </div>
       ${subtitle ? `<div class="df-subtitle">${esc(subtitle)}</div>` : ''}
