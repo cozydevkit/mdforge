@@ -63,8 +63,10 @@ body::before {
 }
 .df-main {
   flex: 1; margin-left: 280px; padding: 3rem 4rem 6rem;
-  max-width: 860px;
+  max-width: calc(100% - 280px); width: 100%;
+  overflow-wrap: break-word; word-break: break-word;
 }
+.df-main > * { max-width: 780px; }
 
 /* ─── Sidebar Brand ─── */
 .df-brand {
@@ -217,7 +219,9 @@ code {
 .code-block pre {
   margin: 0; padding: 1.4rem 1.6rem; overflow-x: auto;
   scrollbar-width: thin; scrollbar-color: var(--bg-3) transparent;
+  white-space: pre; word-wrap: normal;
 }
+.code-block { max-width: 100%; overflow: hidden; }
 .code-block code {
   font-family: var(--mono); font-size: .88rem; line-height: 1.75;
   background: none; border: none; padding: 0; color: var(--text-1);
@@ -299,7 +303,7 @@ img {
     z-index: 100; width: 280px;
   }
   .df-sidebar.open { transform: translateX(0); box-shadow: 4px 0 24px rgba(0,0,0,.5); }
-  .df-main { margin-left: 0; padding: 2rem 1.5rem 4rem; }
+  .df-main { margin-left: 0; padding: 2rem 1.5rem 4rem; max-width: 100%; }
   .df-mobile-toggle { display: flex; }
   .df-theme-toggle { right: 1rem; }
   h1 { font-size: 1.8rem; }
