@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * docforge CLI
- * Usage: docforge build <file> [-o output.html] [--watch] [--minify] [--accent blue]
+ * mdforge CLI
+ * Usage: mdforge build <file> [-o output.html] [--watch] [--minify] [--accent blue]
  */
 
 import { Command } from 'commander';
@@ -18,7 +18,7 @@ const ACCENTS = ['amber', 'green', 'blue', 'purple', 'cyan'];
 const program = new Command();
 
 program
-  .name('docforge')
+  .name('mdforge')
   .description('Stop shipping ugly docs. Markdown → premium interactive HTML.')
   .version(pkg.version);
 
@@ -88,7 +88,7 @@ theme: dark
 accent: amber
 toc: true
 animations: true
-footer: "Built with docforge by CozyDevKit"
+footer: "Built with mdforge by CozyDevKit"
 ---
 
 # My Project
@@ -137,7 +137,7 @@ MIT
 
 ---
 
-*Built with [docforge](https://github.com/cozydevkit/docforge).*
+*Built with [mdforge](https://github.com/cozydevkit/mdforge).*
 `;
 
     writeFileSync(resolve(dir, 'index.md'), starter, 'utf-8');
@@ -157,7 +157,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npx docforge build docs/index.md -o site/index.html --minify
+      - run: npx mdforge build docs/index.md -o site/index.html --minify
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/
@@ -168,12 +168,12 @@ jobs:
     writeFileSync(resolve(ghDir, 'docs.yml'), workflow, 'utf-8');
 
     console.log('');
-    console.log(`  \x1b[33m⚡ docforge init\x1b[0m`);
+    console.log(`  \x1b[33m⚡ mdforge init\x1b[0m`);
     console.log('');
     console.log(`  \x1b[32m✓\x1b[0m Created ${opts.dir}/index.md`);
     console.log(`  \x1b[32m✓\x1b[0m Created .github/workflows/docs.yml`);
     console.log('');
-    console.log(`  \x1b[90mNext: docforge build ${opts.dir}/index.md\x1b[0m`);
+    console.log(`  \x1b[90mNext: mdforge build ${opts.dir}/index.md\x1b[0m`);
     console.log('');
   });
 
@@ -220,7 +220,7 @@ async function buildFile(inputPath, outputPath, displayFile, opts) {
   const minTag = opts.minify ? ' · minified' : '';
   const time = new Date().toLocaleTimeString();
   console.log('');
-  console.log(`  \x1b[33m⚡ docforge\x1b[0m \x1b[90m${time}\x1b[0m`);
+  console.log(`  \x1b[33m⚡ mdforge\x1b[0m \x1b[90m${time}\x1b[0m`);
   console.log('');
   console.log(`  \x1b[32m✓\x1b[0m ${displayFile} → \x1b[36m${outputPath}\x1b[0m`);
   console.log(`  \x1b[90m  ${sizeKB} KB · ${toc.length} sections · ${meta.accent || 'amber'} · ${meta.theme || 'dark'}${minTag}\x1b[0m`);

@@ -67,11 +67,11 @@ describe('render', () => {
     assert.ok(output.includes('df-reveal'));
   });
 
-  it('includes docforge generator meta tag', () => {
+  it('includes mdforge generator meta tag', () => {
     const { html, toc, meta } = parse('# Test');
     const output = render({ html, toc, meta });
     assert.ok(output.includes('name="generator"'));
-    assert.ok(output.includes('docforge'));
+    assert.ok(output.includes('mdforge'));
   });
 
   it('applies accent color override for non-amber', () => {
@@ -85,6 +85,6 @@ describe('render', () => {
     const { html, toc, meta } = parse('# Test');
     const output = render({ html, toc, meta });
     assert.ok(output.includes('df-footer'));
-    assert.ok(output.includes('docforge'));
+    assert.ok(output.includes('mdforge'));
   });
 });

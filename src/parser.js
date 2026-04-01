@@ -1,5 +1,5 @@
 /**
- * docforge — parser.js
+ * mdforge — parser.js
  * Markdown → structured HTML with syntax highlighting and frontmatter extraction
  */
 

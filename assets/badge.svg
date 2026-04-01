@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="20" viewBox="0 0 140 20">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#484848"/>
+      <stop offset="1" stop-color="#333"/>
+    </linearGradient>
+  </defs>
+  <rect rx="3" width="140" height="20" fill="url(#bg)"/>
+  <rect rx="3" x="46" width="94" height="20" fill="#d97706"/>
+  <rect x="46" width="4" height="20" fill="#d97706"/>
+  <g fill="#fff" font-family="Verdana,Geneva,sans-serif" font-size="11">
+    <text x="6" y="14" fill="#ccc">docs</text>
+    <text x="52" y="14" fill="#fff" font-weight="bold">mdforge</text>
+    <text x="105" y="14" fill="rgba(255,255,255,.8)">⚡</text>
+  </g>
+</svg>

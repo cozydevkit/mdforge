@@ -1,34 +1,34 @@
 ---
-title: docforge
+title: mdforge
 subtitle: Stop shipping ugly docs.
 ---
 
-# docforge
+# mdforge
 
 > Markdown to premium interactive HTML in one command. Zero config.
 
-**docforge** transforms plain `.md` files into beautiful, self-contained HTML documentation with a premium dark theme, table of contents, syntax highlighting, scroll animations, and responsive design — all in a single output file with zero external dependencies.
+**mdforge** transforms plain `.md` files into beautiful, self-contained HTML documentation with a premium dark theme, table of contents, syntax highlighting, scroll animations, and responsive design — all in a single output file with zero external dependencies.
 
-## Why docforge?
+## Why mdforge?
 
 Every developer writes docs. Nobody's docs look good.
 
 - **Docusaurus** requires a React project, config files, and a build pipeline
 - **MkDocs** needs Python, plugins, and theme customization
 - **GitHub README** has no dark theme, no interactivity, no visual hierarchy
-- **docforge** needs one command: `docforge build README.md`
+- **mdforge** needs one command: `mdforge build README.md`
 
 ## Quick Start
 
 ```bash
 # Install globally
-npm install -g docforge
+npm install -g mdforge
 
 # Or use directly with npx
-npx docforge build README.md
+npx mdforge build README.md
 
 # Output to specific file
-npx docforge build README.md -o docs/index.html
+npx mdforge build README.md -o docs/index.html
 ```
 
 That's it. Open the `.html` file. Your docs are premium.
@@ -61,14 +61,14 @@ subtitle: The official documentation
 theme: dark
 toc: true
 animations: true
-footer: "Built with docforge"
+footer: "Built with mdforge"
 ---
 ```
 
 ## CLI Options
 
 ```bash
-docforge build <file>
+mdforge build <file>
 
 Options:
   -o, --output <path>     Output file path
@@ -102,7 +102,7 @@ A single `.html` file that looks like this:
 
 ## Code Highlighting
 
-docforge automatically highlights code blocks. Just specify the language:
+mdforge automatically highlights code blocks. Just specify the language:
 
 ```javascript
 function calculateTax(assessedValue, rate) {
@@ -137,7 +137,7 @@ No build folder. No assets directory. No configuration. One file in, one file ou
 
 > Your docs should look as good as your product.
 
-docforge is opinionated about aesthetics and unopinionated about everything else:
+mdforge is opinionated about aesthetics and unopinionated about everything else:
 
 - **Dark-first** — because developers live in dark mode
 - **Typography matters** — Inter for prose, JetBrains Mono for code

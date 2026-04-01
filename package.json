@@ -1,7 +1,7 @@
 {
-  "name": "docforge",
+  "name": "mdforge",
   "version": "0.1.0",
-  "description": "Stop shipping ugly docs. Markdown → premium interactive HTML in one command.",
+  "description": "Stop shipping ugly docs. Markdown to premium interactive HTML in one command.",
   "keywords": [
     "markdown",
     "documentation",
@@ -9,13 +9,14 @@
     "cli",
     "docs",
     "static-site",
-    "dark-theme"
+    "dark-theme",
+    "mdforge"
   ],
   "author": "CozyDevKit <hello@cozydevkit.com>",
   "license": "MIT",
   "type": "module",
   "bin": {
-    "docforge": "./bin/docforge.js"
+    "mdforge": "./bin/mdforge.js"
   },
   "main": "src/renderer.js",
   "files": [
@@ -25,7 +26,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "node bin/docforge.js build README.md -o demo.html",
+    "build": "node bin/mdforge.js build README.md -o demo.html",
     "test": "node --test test/"
   },
   "dependencies": {
@@ -39,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cozydevkit/docforge"
+    "url": "https://github.com/cozydevkit/mdforge"
   },
-  "homepage": "https://cozydevkit.com/docforge"
+  "homepage": "https://cozydevkit.com/mdforge"
 }

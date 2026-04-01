@@ -1,5 +1,5 @@
 /**
- * docforge — renderer.js
+ * mdforge — renderer.js
  * Assembles parsed markdown + theme CSS + inline JS into a single self-contained HTML file
  */
 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Theme toggle
   const toggle = document.getElementById('dfThemeToggle');
   if (toggle) {
-    const saved = localStorage.getItem('docforge-theme');
+    const saved = localStorage.getItem('mdforge-theme');
     if (saved) document.documentElement.setAttribute('data-theme', saved);
     function updateIcon() {
       const dark = document.documentElement.getAttribute('data-theme') !== 'light';
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.addEventListener('click', () => {
       const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('docforge-theme', next);
+      localStorage.setItem('mdforge-theme', next);
       updateIcon();
     });
   }
@@ -145,7 +145,7 @@ export function render({ html, toc, meta }) {
   const accentCSS = buildAccentOverride(meta.accent || 'amber');
   const title = meta.title || 'Documentation';
   const subtitle = meta.subtitle || '';
-  const footer = meta.footer || 'Built with <a href="https://github.com/cozydevkit/docforge">docforge</a> by CozyDevKit';
+  const footer = meta.footer || 'Built with <a href="https://github.com/cozydevkit/mdforge">mdforge</a> by CozyDevKit';
   const showToc = meta.toc !== false && toc.length > 0;
   const showAnimations = meta.animations !== false;
 
@@ -170,7 +170,7 @@ export function render({ html, toc, meta }) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${esc(title)}</title>
-<meta name="generator" content="docforge v${getVersion()}">
+<meta name="generator" content="mdforge v${getVersion()}">
 <style>
 ${css}
 ${accentCSS}

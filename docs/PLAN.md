@@ -1,4 +1,4 @@
-# docforge — Product Plan
+# mdforge — Product Plan
 
 > **Tagline:** Stop shipping ugly docs.  
 > **One-liner:** A CLI that transforms markdown into premium interactive HTML documentation — dark theme, scroll animations, syntax highlighting, table of contents — zero config.  
@@ -17,7 +17,7 @@
 | Docsify | Runtime JS, no static output, SEO-weak |
 | mdBook | Rust ecosystem only, book-format only |
 | GitHub README | No interactivity, no dark theme, no visual hierarchy |
-| **docforge** | **Single command. Markdown in. Premium HTML out. Zero config.** |
+| **mdforge** | **Single command. Markdown in. Premium HTML out. Zero config.** |
 
 ---
 
@@ -42,9 +42,9 @@ OUTPUT: Standalone .html file with:
 ## Architecture
 
 ```
-docforge/
+mdforge/
   bin/
-    docforge.js          # CLI entry point (#!/usr/bin/env node)
+    mdforge.js          # CLI entry point (#!/usr/bin/env node)
   src/
     parser.js            # Markdown → AST (markdown-it)
     transformer.js       # AST → enriched HTML sections
@@ -74,19 +74,19 @@ docforge/
 ### Basic Usage
 ```bash
 # Single file
-docforge build README.md
+mdforge build README.md
 
 # Output to specific file
-docforge build README.md -o docs/index.html
+mdforge build README.md -o docs/index.html
 
 # Watch mode (rebuild on save)
-docforge watch README.md
+mdforge watch README.md
 
 # Multiple files → multi-page site
-docforge build docs/*.md -o site/
+mdforge build docs/*.md -o site/
 
 # With options
-docforge build README.md --theme light --title "My Project" --no-animations
+mdforge build README.md --theme light --title "My Project" --no-animations
 ```
 
 ### Frontmatter Support
@@ -97,7 +97,7 @@ subtitle: Enterprise Architecture Guide
 theme: dark
 accent: amber
 logo: ./logo.svg
-footer: "Built with docforge by CozyDevKit"
+footer: "Built with mdforge by CozyDevKit"
 toc: true
 animations: true
 ---
@@ -108,7 +108,7 @@ animations: true
 
 ### CLI Flags
 ```
-docforge build <file|glob>
+mdforge build <file|glob>
 
 Options:
   -o, --output <path>     Output file or directory (default: <input>.html)
@@ -136,7 +136,7 @@ Options:
 - [ ] Wrap in premium dark theme (single-file CSS inlined)
 - [ ] Scroll-reveal animations on sections (inline JS)
 - [ ] Responsive layout
-- [ ] CLI: `docforge build <file>` → outputs `.html`
+- [ ] CLI: `mdforge build <file>` → outputs `.html`
 - [ ] Single self-contained HTML output (no external deps)
 
 ### V1 (First npm publish)
@@ -147,7 +147,7 @@ Options:
 - [ ] Print stylesheet
 - [ ] Favicon injection
 - [ ] `--minify` flag
-- [ ] npm package: `npx docforge build README.md`
+- [ ] npm package: `npx mdforge build README.md`
 
 ### V2 (Community growth)
 - [ ] Multi-file → multi-page site with shared nav
@@ -208,14 +208,14 @@ The output HTML will carry the same design DNA as the Cozerna landing pages:
                          |
   ← Ugly ────────────────┼──────────────── Beautiful →
                          |
-              Docsify     |   docforge ★
+              Docsify     |   mdforge ★
                 ●        |     ●
                          |
                          ↓
                     Zero Config
 ```
 
-**docforge lives in the bottom-right quadrant: beautiful + zero config.**
+**mdforge lives in the bottom-right quadrant: beautiful + zero config.**
 
 ---
 
@@ -223,11 +223,11 @@ The output HTML will carry the same design DNA as the Cozerna landing pages:
 
 ### Phase 1: Prototype (Day 1)
 - Working CLI that converts .md → premium .html
-- Demo: convert docforge's own README into a showcase page
+- Demo: convert mdforge's own README into a showcase page
 - Push to GitHub under CozyDevKit org
 
 ### Phase 2: Launch (Week 1)
-- Publish to npm: `npx docforge build README.md`
+- Publish to npm: `npx mdforge build README.md`
 - Product Hunt launch: "Stop shipping ugly docs"
 - Hacker News Show HN post
 - Dev.to article: "I built a CLI that turns markdown into cinematic docs"
@@ -237,7 +237,7 @@ The output HTML will carry the same design DNA as the Cozerna landing pages:
 - GitHub Actions integration example
 - VS Code extension (preview pane)
 - Template gallery (different accent colors, layouts)
-- "Built with docforge" badge
+- "Built with mdforge" badge
 - Community themes
 
 ---
@@ -261,8 +261,8 @@ The output HTML will carry the same design DNA as the Cozerna landing pages:
 2. `src/parser.js` — markdown-it parse
 3. `src/themes/dark.css` — premium dark theme (inline-ready)
 4. `src/renderer.js` — assemble single-file HTML
-5. `bin/docforge.js` — CLI entry point
+5. `bin/mdforge.js` — CLI entry point
 6. `README.md` — the tool's own docs (also the demo input)
-7. Test: `docforge build README.md` → open the output
+7. Test: `mdforge build README.md` → open the output
 
 **Let's go.**
