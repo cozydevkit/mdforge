@@ -145,7 +145,7 @@ export function render({ html, toc, meta }) {
   const accentCSS = buildAccentOverride(meta.accent || 'amber');
   const title = meta.title || 'Documentation';
   const subtitle = meta.subtitle || '';
-  const footer = meta.footer || 'Built with <a href="https://github.com/cozydevkit/mdforge">mdforge</a> by CozyDevKit';
+  const footer = meta.footer || 'Built with <a href="https://github.com/cozydevkit-del/mdforge">mdforge</a> by CozyDevKit';
   const showToc = meta.toc !== false && toc.length > 0;
   const showAnimations = meta.animations !== false;
 

@@ -22,13 +22,13 @@ Every developer writes docs. Nobody's docs look good.
 
 ```bash
 # Install globally
-npm install -g @cozydevkit/mdforge
+npm install -g @cozydevkit-del/mdforge
 
 # Or use directly with npx
-npx @cozydevkit/mdforge build README.md
+npx @cozydevkit-del/mdforge build README.md
 
 # Output to specific file
-npx @cozydevkit/mdforge build README.md -o docs/index.html
+npx @cozydevkit-del/mdforge build README.md -o docs/index.html
 ```
 
 That's it. Open the `.html` file. Your docs are premium.

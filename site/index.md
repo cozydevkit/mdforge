@@ -2,7 +2,7 @@
 title: mdforge
 subtitle: Stop shipping ugly docs.
 accent: amber
-footer: "Made with mdforge &mdash; <a href='https://github.com/cozydevkit/mdforge'>GitHub</a> &bull; <a href='https://cozydevkit.com'>CozyDevKit</a>"
+footer: "Made with mdforge &mdash; <a href='https://github.com/cozydevkit-del/mdforge'>GitHub</a> &bull; <a href='https://cozydevkit.com'>CozyDevKit</a>"
 ---
 
 # mdforge
@@ -20,7 +20,7 @@ Your README deserves better than GitHub's default renderer. Your API docs should
 Install globally or use with npx — no project setup needed:
 
 ```bash
-npm install -g @cozydevkit/mdforge
+npm install -g @cozydevkit-del/mdforge
 ```
 
 Then build any markdown file:
@@ -142,7 +142,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npx @cozydevkit/mdforge build docs/index.md -o site/index.html --minify
+      - run: npx @cozydevkit-del/mdforge build docs/index.md -o site/index.html --minify
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/
@@ -205,15 +205,15 @@ jobs:
 
 ```bash
 # Option A: Install globally
-npm install -g @cozydevkit/mdforge
+npm install -g @cozydevkit-del/mdforge
 mdforge build README.md
 
 # Option B: Use directly with npx
-npx @cozydevkit/mdforge build README.md
+npx @cozydevkit-del/mdforge build README.md
 
 # Option C: Scaffold a new docs folder
-npx @cozydevkit/mdforge init
-npx @cozydevkit/mdforge build docs/index.md
+npx @cozydevkit-del/mdforge init
+npx @cozydevkit-del/mdforge build docs/index.md
 ```
 
 ---
