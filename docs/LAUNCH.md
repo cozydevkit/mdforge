@@ -18,7 +18,7 @@ mdforge is a CLI that transforms any markdown file into a premium, self-containe
 One file in. One file out. No React project. No Python. No config files.
 
 ```
-npx @cozydevkit-del/mdforge build README.md
+npx @cozydevkit/mdforge build README.md
 ```
 
 **Topics:** Developer Tools, Open Source, Documentation, Markdown, CLI
@@ -44,7 +44,7 @@ I built a CLI tool that transforms markdown files into premium, self-contained H
 Why: I kept hand-building dark-themed interactive doc pages for projects (with TOC, animations, syntax highlighting, etc). After building the same thing 5+ times, I extracted it into a tool.
 
 What it does:
-- `npx @cozydevkit-del/mdforge build README.md` → single .html file
+- `npx @cozydevkit/mdforge build README.md` → single .html file
 - Premium dark theme with grain texture, generous whitespace
 - Auto-generated sticky TOC sidebar with scroll tracking
 - Syntax-highlighted code blocks with copy-to-clipboard
@@ -61,8 +61,8 @@ What it's NOT:
 
 The landing page (mdforge.dev) was built using mdforge itself.
 
-GitHub: https://github.com/cozydevkit-del/mdforge
-npm: https://www.npmjs.com/package/@cozydevkit-del/mdforge
+GitHub: https://github.com/cozydevkit/mdforge
+npm: https://www.npmjs.com/package/@cozydevkit/mdforge
 
 ---
 
@@ -85,7 +85,7 @@ So I built **mdforge**.
 ## What it does
 
 ```bash
-npx @cozydevkit-del/mdforge build README.md
+npx @cozydevkit/mdforge build README.md
 ```
 
 That's it. Your `README.md` becomes a single, self-contained `.html` file with:
@@ -133,16 +133,16 @@ It's specifically for the use case of: "I have a markdown file and I want it to 
 
 ```bash
 # Use directly
-npx @cozydevkit-del/mdforge build README.md
+npx @cozydevkit/mdforge build README.md
 
 # Or install globally
-npm install -g @cozydevkit-del/mdforge
+npm install -g @cozydevkit/mdforge
 mdforge build README.md -o docs/index.html --accent blue
 ```
 
 The landing page at mdforge.dev was built using mdforge itself. Meta-demo.
 
-**GitHub:** https://github.com/cozydevkit-del/mdforge  
+**GitHub:** https://github.com/cozydevkit/mdforge  
 **npm:** https://www.npmjs.com/package/mdforge
 
 MIT licensed. Stars welcome.
@@ -155,7 +155,7 @@ MIT licensed. Stars welcome.
 
 🧵 I built a CLI that turns markdown into cinematic documentation pages. One command. Zero config.
 
-`npx @cozydevkit-del/mdforge build README.md`
+`npx @cozydevkit/mdforge build README.md`
 
 What you get:
 → Premium dark theme
@@ -189,8 +189,8 @@ mdforge build README.md --watch
 
 The landing page was built using mdforge itself. Meta-demo 🔄
 
-GitHub: github.com/cozydevkit-del/mdforge
-npm: npmjs.com/package/@cozydevkit-del/mdforge
+GitHub: github.com/cozydevkit/mdforge
+npm: npmjs.com/package/@cozydevkit/mdforge
 
 MIT licensed. Stars welcome ⭐
 
@@ -201,14 +201,14 @@ MIT licensed. Stars welcome ⭐
 For projects built with mdforge:
 
 ```markdown
-[![Built with mdforge](https://img.shields.io/badge/docs-mdforge-fbbf24?style=flat-square)](https://github.com/cozydevkit-del/mdforge)
+[![Built with mdforge](https://img.shields.io/badge/docs-mdforge-fbbf24?style=flat-square)](https://github.com/cozydevkit/mdforge)
 ```
 
 ---
 
 ## Launch Checklist
 
-- [ ] Create GitHub repo: cozydevkit-del/mdforge
+- [ ] Create GitHub repo: cozydevkit/mdforge
 - [ ] `npm publish` to registry
 - [ ] Submit to Product Hunt (schedule for Tuesday 12:01 AM PT)
 - [ ] Post Show HN
