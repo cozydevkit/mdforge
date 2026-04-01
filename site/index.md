@@ -20,7 +20,7 @@ Your README deserves better than GitHub's default renderer. Your API docs should
 Install globally or use with npx — no project setup needed:
 
 ```bash
-npm install -g mdforge
+npm install -g @cozydevkit/mdforge
 ```
 
 Then build any markdown file:
@@ -142,7 +142,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npx mdforge build docs/index.md -o site/index.html --minify
+      - run: npx @cozydevkit/mdforge build docs/index.md -o site/index.html --minify
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/
@@ -205,15 +205,15 @@ jobs:
 
 ```bash
 # Option A: Install globally
-npm install -g mdforge
+npm install -g @cozydevkit/mdforge
 mdforge build README.md
 
 # Option B: Use directly with npx
-npx mdforge build README.md
+npx @cozydevkit/mdforge build README.md
 
 # Option C: Scaffold a new docs folder
-npx mdforge init
-npx mdforge build docs/index.md
+npx @cozydevkit/mdforge init
+npx @cozydevkit/mdforge build docs/index.md
 ```
 
 ---

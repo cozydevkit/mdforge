@@ -1,5 +1,5 @@
 {
-  "name": "mdforge",
+  "name": "@cozydevkit/mdforge",
   "version": "0.1.0",
   "description": "Stop shipping ugly docs. Markdown to premium interactive HTML in one command.",
   "keywords": [
